@@ -9,11 +9,11 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    if @contact
+    if @contact.save
       flash[:success] = 'Contato criado com sucesso.'
-      redirect_to root
+      redirect_to root_path
     else
-      render 'new'
+      render :new
     end
   end
 
