@@ -1,25 +1,15 @@
-
-        <% if !contact%>
-          <tr>
-            <td colspan="4" class="text-center">
-              <h3>Sem contatos cadastrados.</h3>
-              <%= link_to 'click aqui', 'clickaqui'%> para cadastrar um novo contato
-            </td>
-          </tr>
-        <% end %>
-        <tr>
-          <th scope="row"><%= contact.full_name%></th>
-          <td>
-            <%= contact.cpf %>
-          </td>
-          <td>
-            <%= contact.email %>
-          </td>
-          <td>
-            <%= contact.birth_date %>
-          </td>
-          <td>
-            ver mais...
-          </td>
-          
-        </tr>
+<tr>
+  <th scope="row"><%= contact.full_name%></th>
+  <td>
+    <%= contact.cpf %>
+  </td>
+  <td>
+    <%= contact.email %>
+  </td>
+  <td>
+    <%= date_helper(contact.birth_date) %>
+  </td>
+  <td>
+    ver mais...
+  </td> 
+</tr>

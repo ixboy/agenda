@@ -2,8 +2,11 @@
 <%= simple_form_for contact do |f| %>
   
   <div class="form-inputs">
-    <%= f.input :full_name, error: 'Title is mandatory, please specify one'  %>
-    <%= f.input :email, error: 'Title is mandatory, please specify one' %>
+    <%= f.input :full_name%>
+    <%= f.input :cpf %>
+    <%= f.input :email%>
+    <%= f.input :birth_date,as: :date, start_year: Date.today.year - 110,
+                               :order => [:day, :month, :year]%>
   </div>
  
   <div class="form-actions">
