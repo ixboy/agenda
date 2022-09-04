@@ -1,2 +1,17 @@
-<h1>Contacts#index</h1>
-<p>Find me in app/views/contacts/index.html.erb</p>
+<div class="col-xs-12 text-center">
+  <h1>Todos Contatos</h1>
+</div>
+  <table class="table table-Secondary table-hover table-striped ">
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">Nome Completo</th>
+        <th scope="col">CPF</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Data de nascimento</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @contacts%>
+    </tbody>
+  </table>
+<%= link_to 'Create new contact', new_contact_path, class: 'btn btn-success' %>
