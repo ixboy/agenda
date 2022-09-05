@@ -1,15 +1,26 @@
 @import "bootstrap/scss/bootstrap";
 
+html {
+  height: 100%;
+}
 
-html,body{
-    height: 100%
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  background-color: #e3f2fd;
+  flex: 1;
+  padding: 20px;
+}
+
+.footer {
+  padding: 20px;
 }
 
 .form-inputs,
 .form-actions {
   margin-bottom: 20px;
-}
-
-.footer {
-  // text-align: center;
 }
