@@ -13,9 +13,10 @@
   <body>
     <%= render 'layouts/header'%>
     <main class="container">
+      <%= render 'layouts/flash_messages'%>
       <%= yield %>
     </main>
-    <div class="fixed-bottom bg-dark footer text-center text-secondary ">
+    <div class="bg-dark footer text-center text-secondary ">
       <%= render 'layouts/footer'%>
     </div>
   </body>
