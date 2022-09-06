@@ -1,0 +1,11 @@
+<li class="nav-item">
+  <%= link_to 'Editar', edit_user_path(current_user), class: "nav-link" %>
+</li>
+<li class="nav-item">
+  <%= link_to 'Sair', sair_path, method: :delete, class: "nav-link" %>
+</li>
+<li class="nav-item">
+  <button class="btn btn-secondary nav-link">
+    Olá <%= current_user.name %>
+  </button>
+</li>
