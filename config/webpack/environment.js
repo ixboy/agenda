@@ -1,13 +1,14 @@
-require("jquery")
-require("@rails/ujs").start()
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
-require("bootstrap")
+const { environment } = require('@rails/webpacker')
 
-import $ from "jquery"
+// Add the following lines
+const webpack = require("webpack")
 
-document.addEventListener("turbolinks:load", () => {
-  $('[data-toggle="tooltip"]').tooltip()
-  $('[data-toggle="popover"]').popover()
-})
+environment.plugins.append("Provide", new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery',
+    Popper: ['popper.js', 'default']  // Not a typo, we're still using popper.js here
+}))
+// End new addition
+
+module.exports = environment
+
