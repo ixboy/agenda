@@ -1,4 +1,5 @@
 <div class="col-xs-12 text-center">
+
   <h1>Todos Contatos</h1>
 </div>
   <table class="table table-Secondary table-hover table-striped ">
@@ -11,15 +12,14 @@
       </tr>
     </thead>
     <tbody>
-    <% if !@contacts%>
+    <% if @contacts.empty? %>
           <tr>
             <td colspan="4" class="text-center">
               <h3>Sem contatos cadastrados.</h3>
-              <%= link_to 'click aqui', new_contact_path, class: 'btn btn-success' %>  para cadastrar um novo contato
             </td>
           </tr>
     <% end %>
     <%= render @contacts%>
     </tbody>
   </table>
-<%= link_to 'Create new contact', new_contact_path, class: 'btn btn-success' %>
+<%= new_contact_link %>

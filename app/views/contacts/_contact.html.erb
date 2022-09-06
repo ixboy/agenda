@@ -10,6 +10,12 @@
     <%= date_helper(contact.birth_date) %>
   </td>
   <td>
-    ver mais...
-  </td> 
+    <%= edit_contact_link(current_user, contact)%>
+  </td>
+  <td>
+    <%= delete_contact_link(current_user, contact)%>
+  </td>
+  <td>
+    <%=  mais_info_link(contact) %>
+  </td>
 </tr>
