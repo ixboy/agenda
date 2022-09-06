@@ -1,0 +1,30 @@
+pt-BR:
+  hello: "Olá!"
+
+  activerecord:
+    attributes:
+      user:
+        email: "Email"
+        name: "Nome"
+        password: "Senha"
+        password_confirmation: "Confirmação da senha"
+      contact:
+        full_name: "Nome Completo"
+        cpf: "CPF"
+        email: "Email"
+        birth_date: "Data de nascimento"
+      address:
+        cep: "CEP"
+        street: "Rua"
+        number: "Número"
+        district: "Bairro"
+        city: "Cidade"
+        state: "Estado"
+    errors:
+      messages:
+        blank: "não pode ser em branco"
+        invalid: "inválido"
+        taken: "já cadastrado"
+        confirmation: "não é igual. insira a mesma senha"
+        too_long: "Muito grande. Máximo de %{count} caracteres"
+        too_short: "Muito curta. Mínimo de %{count} caracteres"
