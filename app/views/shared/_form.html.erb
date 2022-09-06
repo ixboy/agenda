@@ -1,5 +1,5 @@
-<%= simple_form_for contact do |f| %>
-  
+<%= simple_form_for(@contact) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
   <div class="form-inputs">
     <%= f.input :full_name%>
     <%= f.input :cpf %>
@@ -7,8 +7,8 @@
     <%= f.input :birth_date,as: :date, start_year: Date.today.year - 110,
                                :order => [:day, :month, :year]%>
   </div>
- 
-  <div class="form-actions">
-    <%= f.submit 'Salvar', class: 'btn btn-primary' %>
   </div>
+<div class="form-actions">
+  <%= f.submit 'Salvar', class: 'btn btn-primary' %>
+</div>
 <% end %>
