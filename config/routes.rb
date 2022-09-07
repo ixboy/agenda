@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   get 'addresses/new'
   post 'address', to: 'addresses#create', as: 'address'
-  get 'addresses/edit'
-  get 'addresses/destroy'
   root 'contacts#index'
 
   get 'cadastro', to: 'users#new'
