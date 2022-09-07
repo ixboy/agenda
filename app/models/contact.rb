@@ -9,8 +9,8 @@ class Contact < ApplicationRecord
                     uniqueness: { case_sensitive: true }
 
   belongs_to :user
-  has_one :address
-
+  has_one :address,             dependent: :destroy
+  accepts_nested_attributes_for :address
   def self.search(search)
     if search
       t = Contact.arel_table
