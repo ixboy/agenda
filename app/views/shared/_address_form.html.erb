@@ -1,0 +1,11 @@
+<%= simple_form_for :address, url: address_path do |ad| %>
+  <div class="form-inputs">
+    <%= ad.input :cep %>
+    <%= ad.input :street %>
+    <%= ad.input :number %>
+    <%= ad.input :district %>
+    <%= ad.input :city %>
+    <%= ad.input :state %>
+  </div>
+  <%= ad.submit "Cadastrar", class: "btn btn-primary" %>
+<% end %>
