@@ -5,7 +5,6 @@ import 'bootstrap';
 import "channels"
 import "jquery"
 import '../stylesheets/application'
-
 // Import the specific modules you may need (Modal, Alert, etc)
 import { Tooltip, Popover } from "bootstrap"
 

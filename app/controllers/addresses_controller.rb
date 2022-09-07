@@ -1,5 +1,5 @@
 class AddressesController < ApplicationController
-  
+
   def new
     session[:contact] = Contact.find_by(id: params[:contact_id])
   end
@@ -21,5 +21,4 @@ class AddressesController < ApplicationController
   def address_params
     params.require(:address).permit(:cep, :street, :number, :district, :city, :state, :contact_id)
   end
-
 end
