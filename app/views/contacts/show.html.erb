@@ -3,45 +3,47 @@
     <section class="user_info p-2">
       <article>
           <div>
-            <%# <%= gravatar_for @user %> %>
+            <%# <%= gravatar_for @contact.user %>
           </div>
           <h1>
-            <%= @contact.user.name %>
+            <%= @contact.full_name %>
           </h1>
       </article>
     </section>
     <article class="current_user_events p-2">
-      <h5> Endereço do contato </h5>
-      <h6> Aqui vou meter todos os endereços </h6>
-      <%# <% @current_user_event.each do |personal_event| %> 
-        <%# <p><%= link_to personal_event.event_name, event_path(personal_event.id) %></p> %>
-      <%# <% end %>
+      <h5> <%= @contact.email %> </h5>
     </article>
-  </aside>
+    </aside>
     <article class="event-form col-md-3 mt-4">
-    <h4>Cidade onde mora</h4>
-    <h6>aqui meto a cidade</h6>
-    <%# <%= past_events(@attended_events) %> %>
+    <h4><%= @address.city %></h4>
   </article>
   <article class="event-form col-md-3 mt-4">
-    <h4>Pais onde Mora</h4>
-    <h4>aqui vai o nome do Pais</h4>
-    <%# <%= my_attendance(@future_events) %> %>
+    <h4><%= @address.street %></h4>
   </article>
 </div>
-<div class="row m-3">
-<div class="col-xs-12">
-  <h2 class="my-2">Cadastre o endereço do contato</h3>
-</div>
-<div class="col-md-6 col-md-offset-3 col-xs-12">
-<%= simple_form_for :example do |f| %>
 
-  <%= f.input :cep %>
-  <%= f.input :street %>
-  <%= f.input :district %>
-  <%= f.input :city %>
-  <%= f.input :state %>
+<h3> Endereço </h3>
 
-<% end %>
-
-</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>CEP</th>
+      <th>Rua</th>
+      <th>Número</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= @address.cep %></td>
+        <td><%= @address.street %></td>
+        <td><%= @address.number %></td>
+        <td><%= @address.city %></td>
+        <td><%= @address.state %></td>
+      </tr>
+  </tbody>
+</table>
+<%= link_to "Go Back", root_path, class: 'btn btn-secondary' %>
+<%= new_contact_link %>
