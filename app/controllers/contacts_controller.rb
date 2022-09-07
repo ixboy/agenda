@@ -1,10 +1,12 @@
 class ContactsController < ApplicationController
+
   def index
     @contacts = Contact.search(params[:search])
   end
 
   def show
     @contact = Contact.find_by(id: params[:id])
+    @address = @contact.address
   end
 
   def new
@@ -15,7 +17,7 @@ class ContactsController < ApplicationController
     @contact = current_user.contacts.build(contact_params)
     if @contact.save
       flash[:success] = 'Contato criado com sucesso.'
-      redirect_to root_path
+      redirect_to new_contact_address_path(@contact)
     else
       render :new
     end
@@ -33,7 +35,7 @@ class ContactsController < ApplicationController
     @contact = current_user.contacts.find(params[:id])
     if @contact.update(contact_params)
       flash[:success] = 'Contato atualizado com sucesso'
-      redirect_to root_path
+      redirect_to contact_path(@contact)
     else
       render 'edit'
     end
