@@ -1,12 +1,9 @@
-function hello(name) {
-    let greeting = "Hello, " + name + "!";
-    console.log(greeting);
-    alert(greeting);
-}
-
+console.log('Hello from My JS')
 document.addEventListener('turbolinks:load', () => {
-    const clickButton = document.getElementById("greet-user-button");
-    clickButton.addEventListener('click', (event) => {
-        hello('JavaScript')
-    });
+    const findCep = () => {
+        const cep = document.getElementById("cep").value;
+        
+    }
+    document.getElementById("cep").addEventListener('focusout', findCep);
+    
 });

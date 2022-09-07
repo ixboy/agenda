@@ -1,7 +1,8 @@
 <%= simple_form_for(@contact) do |f| %>
 <%= render 'shared/error_messages', object: f.object %>
   <div class="form-inputs">
-    <%= f.input :full_name%>
+    <%= f.input :full_name, :input_html => { :value => @contact.id, :id => "cep"} %>
+
     <%= f.input :cpf %>
     <%= f.input :email%>
     <%= f.input :birth_date,as: :date, start_year: Date.today.year - 110,
