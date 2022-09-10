@@ -16,6 +16,7 @@ gem 'kaminari'
 gem 'simple_form'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
