@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'addresses/new'
   post 'address', to: 'addresses#create', as: 'address'
   root 'contacts#index'
+  get 'addresses/new'
+  get 'fetch_cep', to: 'addresses#fetch_cep'
 
   get 'cadastro', to: 'users#new'
   get 'entrar',   to: 'sessions#new'

@@ -18,9 +18,16 @@ module ContactsHelper
             class: 'btn btn-warning'
   end
 
+  def edit_address_link(user, contact, address_id)
+    return unless user && user.id == contact.user.id
+
+    link_to 'Editar', "/contacts/#{contact.id}/addresses/#{address_id}/edit",
+            class: 'btn btn-success'
+  end
+
   def mais_info_link(contact)
     return unless contact
-    
+
     link_to 'Mais Info...', contact_path(contact),
             class: 'btn btn-success'
   end
