@@ -1,7 +1,14 @@
 class ContactsController < ApplicationController
+  include Paginable
 
+  before_action :require_logged_in_user, except: [:index, :show]  
   def index
-    @contacts = Contact.search(params[:search])
+    if current_user
+      @contacts = Contact.includes([:user]).search(params[:search])
+      .page(current_page)
+    else
+      @contacts = Contact.search(params[:search]).page(current_page)
+    end
   end
 
   def show

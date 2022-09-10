@@ -1,0 +1,49 @@
+@import "bootstrap/scss/bootstrap";
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  background-color: #e3f2fd;
+  flex: 1;
+  padding: 20px;
+}
+
+.footer {
+  padding: 20px;
+}
+
+.form-group label {
+  margin-top: 0.9rem;
+}
+
+.form-group label {
+  font-size: 20px;
+  transition: .5s;
+  cursor: text;
+}
+
+.form-group input {
+  width: 100%;
+  bottom: 0;
+  box-shadow: none;
+  transition: .5s;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Pagination */
+.blog-pagination {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.blog-pagination > .btn {
+  border-radius: 2rem;
+}
