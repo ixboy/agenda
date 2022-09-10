@@ -12,6 +12,7 @@ gem 'rails', '~> 6.1.6', '>= 6.1.6.1'
 gem 'rails-i18n', '~> 6.0'
 gem 'rest-client'
 gem 'sass-rails', '>= 6'
+gem 'kaminari'
 gem 'simple_form'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
@@ -21,6 +22,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'bullet'
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   gem 'spring'
