@@ -9,6 +9,7 @@
                                :order => [:day, :month, :year]%>
   </div>
 <div class="form-actions">
+  <%= link_to "Go Back", root_path, class: 'btn btn-secondary' %>
   <%= f.submit 'Salvar', class: 'btn btn-primary' %>
 </div>
 <% end %>
