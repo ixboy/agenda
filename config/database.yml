@@ -15,4 +15,3 @@ production:
   <<: *default
   database: agenda_production
   username: ismaelixboy
-  password: <%= ENV['AGENDA_DATABASE_PASSWORD'] %>
