@@ -78,4 +78,4 @@ rails s
 
 ## Acknowledgments
 
-### Leadster  --obrigado pela idea.
+### Leadster  --obrigado pelo teste.
