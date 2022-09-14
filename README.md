@@ -9,15 +9,17 @@ Neste projeto eu utilizei o Ruby on Rails 6 no pattern MVC. Também utilizei alg
 ![screenshot](./app/assets/images/Screenshot1.png)
   
 
-## Built WithScreenshot from 2022-09-10 12-29-18.png
-
-- [Ruby](https://www.ruby-lang.org/en/) 3.1.2
+- [Ruby](https://www.ruby-lang.org/en/) 3.0.1
 - [Rails](https://guides.rubyonrails.org/getting_started.html) 6.1.3
-- [Gems](https://rubygems.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+  - [Gems](https://rubygems.org/)
+  - [Kaminari](https://github.com/kaminari/kaminari)
+  - [REST Client](https://github.com/rest-client/rest-client)
+  - [Faker](https://github.com/faker-ruby/faker)
 
 ## Live Demo
 
-[Click here to view it live on Heroku](https://bootstrap-blog-rails.herokuapp.com/)
+[Click here to view it live on Heroku](https://agenda-info-app.herokuapp.com)
 
 ## Initial settings to run the project
 
@@ -47,23 +49,23 @@ rails db:seed
 rails s
 ```
 
-### Prerequisites
+### Pré-requisitos
 
 - Ruby on Rails v6.x. Para aprender como instalar Ruby on Rails, siga este [link](https://guides.rubyonrails.org/getting_started.html)
 
-### Usage
+### Utilização
 
-- start a server with `rails s`
+- Começar o servidor digitando no terminal `rails s `  e depois clicar a tecla `Enter`
 
-- open `http://localhost:3000/` in your browser.
+- Abrir `http://localhost:3000/` no teu browser.
 
-- Inscreva-se com seu e-mail e senha, um e-mail de confirmação será enviado para você e você poderá começar a aproveitar o aplicativo...
+- Inscreva-se com seu nome, e-mail e senha, e depois podes utilizar e curtir o aplicativo...
 
 
 
 ## Deployment
 
-- A App vai ser deployed no Heroku Brevemente.
+- O aplicativo Web está deployed no Heroku...
 
 ## Author
 
@@ -76,4 +78,4 @@ rails s
 
 ## Acknowledgments
 
-#### Leadster
+### Leadster  --obrigado pela idea.
