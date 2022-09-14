@@ -14,5 +14,5 @@ test:
 production:
   <<: *default
   database: agenda_production
-  username: agenda
+  username: ismaelixboy
   password: <%= ENV['AGENDA_DATABASE_PASSWORD'] %>
