@@ -17,10 +17,6 @@ Neste projeto eu utilizei o Ruby on Rails 6 no pattern MVC. Também utilizei alg
   - [REST Client](https://github.com/rest-client/rest-client)
   - [Faker](https://github.com/faker-ruby/faker)
 
-## Live Demo
-
-[Click here to view it live on Heroku](https://agenda-info-app.herokuapp.com)
-
 ## Initial settings to run the project
 
 ```bash
