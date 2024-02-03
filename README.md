@@ -61,7 +61,7 @@ rails s
 
 ## Deployment
 
-- O aplicativo Web está deployed no Heroku...
+- O aplicativo ja nao está deployed no Heroku, foi removido...
 
 ## Author
 
